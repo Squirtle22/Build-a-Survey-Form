@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background {
+  /* Replace 'background.jpg' with your image path */
+  background-image: url('/pikaxchu.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
+
+#title {
+  text-align: center;
+  background: linear-gradient(to bottom, #F4E77E, #FD3117);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 36px;
+}
+
+#description {
+  background: linear-gradient(to bottom,  #F4E77E, #FD3117);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 29px;
+  text-align: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  color: white;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#survey-form label {
+  align-self: flex-start;
+}
+
+#survey-form input[type="text"],
+#survey-form input[type="email"],
+#survey-form input[type="number"],
+#survey-form select,
+#survey-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: ridge;
+  border-radius: 5px;
+  color: #9CA3AF;
+
+}
+
+#survey-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcb05;
+  /* Pokemon yellow */
+  color: black;
+  cursor: pointer;
+}
+
+#survey-form button:hover {
+  background-color: #cc9e00;
+  /* Darker yellow */
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#badges {
+  padding-bottom: 20px;
+}
+
+.form-title {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #FFCC06;
+}
+
+/* .header-title {
+    font-size: 24px;
+
+} */
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 10px;
+}
+
+#winner {
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+#comments {
+  padding: 20px 0;
+}
+
+.suggestions {
+  margin-bottom: 20px;
+}
+
+.mobile-background {
+  /* Replace 'background.jpg' with your image path */
+  background-image: url('/pikaxchu.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 100vh;
+ 
+}
+
+@media screen and (max-width: 600px) {
+
+  #title {
+    text-align: center;
+    background: linear-gradient(to bottom, #F4E77E, #FD3117);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 28px;
+  }
+
+  #description {
+    background: linear-gradient(to bottom, red, #363b81);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #survey-form input[type="text"],
+#survey-form input[type="email"],
+#survey-form input[type="number"],
+#survey-form select,
+#survey-form textarea {
+font-size: small;
+
+}
+}
+
+.hover-scale-3:hover {
+  transform: scale(5);
+}
