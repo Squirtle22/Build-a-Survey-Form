@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
 
 
 export default function Home() {
@@ -8,12 +7,16 @@ export default function Home() {
       <h1 id="title">Catch the pokemon if you can!</h1>
       <p className="header-title" id="description">Help us catch the pokemon of the month...</p>
       <form id="survey-form">
+        <h3 className="text-yellow-400">This months price 4 packets</h3>
+        <Image src="/prize2.webp" alt="pokemon" width={500} height={500} className="overflow-hidden transition-transform duration-300  ease-in-out transform hover-scale-3 size-24" />
+        <p className="md:hidden text-sm text-yellow-400">Tap me</p>
+        <p className="hidden md:inline-block text-sm text-yellow-400">Hover over me</p>
         <label className="form-title" id="name-label">Name</label>
         <input id="name" type="text" placeholder="Enter your name" required />
         <label className="form-title" id="email-label">Email</label>
         <input id="email" type="email" placeholder="Enter your email" required />
         <label className="form-title" id="number-label">Age</label>
-        <input id="number" type="number" min="0" max="100" placeholder="Age" />
+        <input id="number" type="number" min="0" max="100" placeholder="Age"  />
         <label className="form-title" id="winner">Guess the pokemon of the month to win!</label>
         <select name="" id="dropdown">
           <option value="">Please select</option>
@@ -23,8 +26,6 @@ export default function Home() {
           <option value="">Meutwo</option>
 
         </select>
-
-        <Image src="/prize.jpg" alt="pokemon" width={70} height={70} className="transition-transform duration-300 ease-in-out transform hover-scale-3" />
 
         <label className="form-title" id="badges">What set's do you collect?</label>
         <div className="checkbox-container bg-">
