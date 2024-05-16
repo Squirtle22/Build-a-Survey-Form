@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/assest/styles.css">
 </head>
+
 <body>
-    
+    <h1 id="title">Catch the pokemon if you can!</h1>
+    <p class="header-title" id="description">Help us catch the pokemon of the month...</p>
+    <form id="survey-form">
+        <label class="form-title" id="name-label">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        <label class="form-title" id="email-label">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <label class="form-title" id="number-label">Age</label>
+        <input id="number" type="number" min="0" max="100" placeholder="Age">
+        <label class="form-title" id="winner">Guess the pokemon of the month to win!</label>
+        <select name="" id="dropdown">
+            <option value="">Please select</option>
+            <option value="">Squirtle</option>
+            <option value="">Pikachu</option>
+            <option value="">Charmander</option>
+            <option value="">Meutwo</option>
+
+        </select>
+        <label class="form-title" id="winner">Would you like to be entered into the competition.</label>
+        <div class="radio-container">
+            <input id="competition" type="radio" value="yes" name="radio">
+            <label for="">Yes</label>
+        </div>
+        <div class="radio-container" id="winner">
+            <input id="competition" type="radio" value="no" name="radio">
+            <label for="">No</label>
+        </div>
+
+        <label class="form-title" id="badges">What pokemon badges do you have?</label>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="boulderBadge">
+            <label for="pokemonBadge">Boulder Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="cascadeBadge">
+            <label for="pokemonBadge">Cascade Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="thunderBadge">
+            <label for="pokemonBadge">Thunder Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="rainbowBadge">
+            <label for="pokemonBadge">Rainbow Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="soulBadge">
+            <label for="pokemonBadge">Soul Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="marshBadge">
+            <label for="pokemonBadge">Marsh Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="volcanoBadge">
+            <label for="pokemonBadge">Volcano Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="earthBadge">
+            <label for="pokemonBadge">Earth Badge</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="zephyrBadge">
+            <label for="pokemonBadge">Zephyr Badge</label>
+        </div>
+
+        <label class="form-title" for="comments">Comments and Suggestions</label>
+        <textarea name="comments" id="comments"></textarea>
+
+        <button id="submit" type="submit">Submit</button>
+
+    </form>
+
 </body>
+
 </html>
