@@ -2,16 +2,18 @@
 
 body {
     /* Replace 'background.jpg' with your image path */
-    background-image: url('/assest/images/pika.jpg');
+    background-image: url('/assest/images/pikaxchu.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     min-height: 100vh;
     font-family: 'Press Start 2P', cursive;
+    background-color: #F5F5F5;
 }
 
 #title {
     text-align: center;
-    background: linear-gradient(to bottom, red, #363b81, white);
+    background: linear-gradient(to bottom, #FC466B, #3F5EFB);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -19,7 +21,7 @@ body {
 }
 
 #description {
-    background: linear-gradient(to bottom,#363b81, #ffde00 );
+    background: linear-gradient(to bottom, #FC466B, #3F5EFB );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -125,9 +127,9 @@ body {
 @media screen and (max-width: 600px) {
     body {
         /* Replace 'background.jpg' with your image path */
-        background-image: url('/assest/images/pokemon.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url('/assest/images/pikaxchu.jpg');
+        background-repeat: repeat;
+        background-size: contain;
         background-position: center;
         min-height: 100vh;
         font-family: 'Press Start 2P', cursive;
