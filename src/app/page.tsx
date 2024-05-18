@@ -27,7 +27,7 @@ export default function Home() {
 
         </select>
 
-        <label className="form-title" id="badges">What set's do you collect?</label>
+        <label className="form-title" id="badges">What set&apos;s do you collect?</label>
         <div className="checkbox-container bg-">
           <input type="checkbox" name="pokemonBadge" id="pokemonBadge" value="boulderBadge" />
           <label>Base Series</label>
