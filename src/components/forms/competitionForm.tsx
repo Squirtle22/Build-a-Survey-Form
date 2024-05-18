@@ -1,52 +1,35 @@
+// CompetitionForm.js
 'use client'
 import Image from 'next/image'
 import React from 'react'
 import { toast } from 'sonner'
 
 const pokemonSeries = [
-    'Base Series', 
-    'Neo Series', 
-    'e-Card Series', 
-    'EX Series', 
-    'Diamond & Pearl Series', 
-    'Platinum Series', 
-    'HeartGold & SoulSilver Series', 
-    'Black & White Series', 
-    'XY Series', 
-    'Sun & Moon Series', 
-    'Sword & Shield Series', 
+    'Base Series', 'Neo Series', 'e-Card Series', 'EX Series', 
+    'Diamond & Pearl Series', 'Platinum Series', 
+    'HeartGold & SoulSilver Series', 'Black & White Series', 
+    'XY Series', 'Sun & Moon Series', 'Sword & Shield Series', 
     'Scarlet & Violet Series'
-]
-
-const pokemonGuess = [
-    'Squirtle',
-    'Pikachu',
-    'Charmander',
-    'Mewtwo',
-    'Jigglypuff',
-    'Meowth',
-    'Psyduck',
-    'Snorlax',
-    'Bulbasaur',
-    'Gengar'
 ]
 
 export default function CompetitionForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const data: { [key: string]: any } = Object.fromEntries(formData.entries());
+        const data: {[key: string]:any } = Object.fromEntries(formData.entries());
 
         // Handling multiple checkboxes with the same name
         data.pokemonBadge = formData.getAll('pokemonBadge');
         if (data.pokemonBadge.length === 0) {
             alert('Please select at least one set');
             return;
-        } if (data.pokemonBadge.length === 12) {
-            toast.success(`Your a True Pokémon Mastaer! 🏆`);
+        }
+        if (data.pokemonBadge.length === 12) {
+            toast.success(`You're a True Pokémon Master! 🏆`);
             return;
         }
 
+        
 
         try {
             const response = await fetch('/api/submit', {
@@ -60,7 +43,8 @@ export default function CompetitionForm() {
             if (response.ok) {
                 toast.success('Entry submitted successfully!');
             } else {
-                toast.error('Failed to submit entry');
+                const result = await response.json();
+                toast.error(`Failed to submit entry: ${result.message}`);
             }
         } catch (error) {
             toast.error('An error occurred');
@@ -82,11 +66,12 @@ export default function CompetitionForm() {
             <input id="email" name="email" type="email" placeholder="Enter your email" required />
 
             <label className="form-title" id="winner">Guess the Pokémon of the month to win!</label>
-            <select name="pokemonGuess" id="dropdown" required>
-                <option value="" disabled selected>Select an option</option>
-                {pokemonGuess.map((pokemon, index) => (
-                    <option value={pokemon} key={index}>{pokemon}</option>
-                ))}
+            <select name="pokemonGuess" id="dropdown" required defaultValue="">
+                <option value="" disabled>Please select</option>
+                <option value="Squirtle">Squirtle</option>
+                <option value="Pikachu">Pikachu</option>
+                <option value="Charmander">Charmander</option>
+                <option value="Mewtwo">Mewtwo</option>
             </select>
 
             <label className="form-title" id="badges">What sets do you collect?</label>
