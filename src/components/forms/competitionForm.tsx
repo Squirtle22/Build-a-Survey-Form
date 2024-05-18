@@ -5,18 +5,31 @@ import React from 'react'
 import { toast } from 'sonner'
 
 const pokemonSeries = [
-    'Base Series', 'Neo Series', 'e-Card Series', 'EX Series', 
-    'Diamond & Pearl Series', 'Platinum Series', 
-    'HeartGold & SoulSilver Series', 'Black & White Series', 
-    'XY Series', 'Sun & Moon Series', 'Sword & Shield Series', 
+    'Base Series', 'Neo Series', 'e-Card Series', 'EX Series',
+    'Diamond & Pearl Series', 'Platinum Series',
+    'HeartGold & SoulSilver Series', 'Black & White Series',
+    'XY Series', 'Sun & Moon Series', 'Sword & Shield Series',
     'Scarlet & Violet Series'
+]
+
+const pokemonGuess = [
+    'Squirtle', 
+    'Pikachu', 
+    'Bulbasaur',
+    'Charmander', 
+    'Mewtwo',
+    'Mew',
+    'Lugia',
+    'Ho-Oh',
+    'Celebi',
+    'Suicune'
 ]
 
 export default function CompetitionForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const data: {[key: string]:any } = Object.fromEntries(formData.entries());
+        const data: { [key: string]: any } = Object.fromEntries(formData.entries());
 
         // Handling multiple checkboxes with the same name
         data.pokemonBadge = formData.getAll('pokemonBadge');
@@ -28,8 +41,6 @@ export default function CompetitionForm() {
             toast.success(`You're a True Pokémon Master! 🏆`);
             return;
         }
-
-        
 
         try {
             const response = await fetch('/api/submit', {
@@ -67,11 +78,10 @@ export default function CompetitionForm() {
 
             <label className="form-title" id="winner">Guess the Pokémon of the month to win!</label>
             <select name="pokemonGuess" id="dropdown" required defaultValue="">
-                <option value="" disabled>Please select</option>
-                <option value="Squirtle">Squirtle</option>
-                <option value="Pikachu">Pikachu</option>
-                <option value="Charmander">Charmander</option>
-                <option value="Mewtwo">Mewtwo</option>
+                <option value="" disabled>Select a pokemon</option>
+                {pokemonGuess.map((pokemon, index) => (
+                    <option key={index} value={pokemon}>{pokemon}</option>
+                ))}
             </select>
 
             <label className="form-title" id="badges">What sets do you collect?</label>
