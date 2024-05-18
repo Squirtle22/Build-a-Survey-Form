@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "beforegit": "next lint && next build"
   },
   "dependencies": {
     "clsx": "^2.1.1",
