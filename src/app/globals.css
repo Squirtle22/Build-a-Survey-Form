@@ -13,19 +13,20 @@
 
 #title {
   text-align: center;
-  background: linear-gradient(to bottom, #F4E77E, #FD3117);
+  background: linear-gradient(to bottom, #E80E57, #35196F);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 36px;
+  text: bold;
 }
 
 #description {
-  background: linear-gradient(to bottom,  #F4E77E, #FD3117);
+  background: linear-gradient(to bottom,  #E80E57, #FF0884);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 29px;
+  font-size: 30px;
   text-align: center;
 }
 
