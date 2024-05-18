@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .background {
-  /* Replace 'background.jpg' with your image path */
   background-image: url('/pikaxchu.jpg');
   background-repeat: no-repeat;
   background-size: contain;
